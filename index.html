@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type = "text/javascript" src = "script.js"></script>
+    <link rel = "stylesheet" href = "./style.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class = "header">
+        <div id = "library">LIBRARY</div>
+        <div id = "functionality">
+            <div>
+                <span>List of books:</span>
+                <button type = "button" id = "list"></button>
+            </div>
+            <div>
+                <span>Add new books:</span>
+                <button type = "button" id = "add"></button>
+            </div>
+        </div>
+    </div>
+    <main>
+        <div class = "shelf" id = "s0">
+            <div class = "grid">
+                <div class = "content" id = "o">
+                    <div class = "text">
+                        <div class = "info">
+                            <span class = "tit"></span>
+                            <span class = "author"></span>
+                            <span class = "pages"></span>
+                        </div>
+                        <div class = "buttons">
+                            <button class = "del" type = "button"></button>
+                            <button class = "read" type = "button">read</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div> 
+    </main>
+    <div id = "form">
+        <form id="f">
+            <div>
+                <input type = "text" id = "title" name = "title" placeholder=" " maxlength = "40" required>
+                <label for = "title">Book's title</label>
+            </div>
+            <div>
+                <input type = "text" id = "aname" name = "name" placeholder=" " maxlength = "30" required>
+                <label for = "aname">Author's name</label>
+            </div>
+            <div>
+                <input type = "number" id = "number" name = "number" placeholder=" " min = "1" max = "25000" required>
+                <label for = "number">Number of pages</label>
+                <div class="requirements">
+                    Please enter the number of pages (no more than 25000)
+                </div>
+            </div>
+            <div id = "r">
+                <span>Have you read it?</span>
+                <div>
+                    <div id = "one">
+                        <input id="r1" type="radio" name="radio" value="Yes" checked>
+                        <label for="r1">Yes</label>
+                    </div>
+                    <div id = "two">
+                        <input id="r2" type="radio" name="radio" value="No">
+                        <label for="r2">No</label>
+                    </div>
+                </div>
+            </div>
+            <span>
+                <button type = "button" id = "a">Add</button>
+                <button type = "button" id = "b">Close</button>
+            </span>
+        </form>
+    </div>
+    <div id = "table">
+        <div id = "close"></div>
+        <table id = "bookslist">
+            <tr>
+                <th onclick="sortTable(0)">№</th>
+                <th onclick="sortTable(1)">Title</th>
+                <th onclick="sortTable(2)">Author</th>
+                <th onclick="sortTable(3)">Number of pages</th>
+                <th onclick="sortTable(4)">Status</th>
+            </tr>
+        </table>
+    </div>
+</body>
+</html>

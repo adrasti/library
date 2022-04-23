@@ -1,0 +1,404 @@
+html, body {
+    margin: 0;
+    padding: 0;
+}
+
+img {
+    margin: 0;
+    padding: 0;
+}
+
+button {
+    display: inline-block;
+    border: none
+}
+
+main {
+    background-image: url(./assets/library.jpg);
+    background-repeat: round repeat;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    position: relative;
+}
+
+.shelf {
+    background-image: url(./assets/bookshelf.jpg);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: calc(962px * 1.1);
+    height: calc(766px * 1.1);
+}
+
+.grid {
+    display: grid;
+    margin: 20px;
+    grid-template-rows: 245px 245px 245px;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 30px 30px;
+    justify-items: center;
+}
+
+.content {
+    background-image: url(./assets/book.png);
+    background-size: contain;
+    background-repeat: no-repeat;
+    width: 90%;
+    display: flex;
+    align-items: flex-end;
+}
+
+.text {
+    overflow-wrap: break-word;
+    height: 210px;
+    width: 160px;
+    margin-left: 10px;
+    display: grid;
+    grid-template-rows: repeat(4, 1fr);
+}
+
+.info {
+    width: 160px;
+    grid-row-start: 1;
+    grid-row-end: 4;
+}
+
+.read {
+    border: solid black 1px;
+    background-color: rgba(255, 255, 255, 0.538);
+    cursor: pointer;
+    font-weight: bolder;
+}
+
+.info > span {
+    display: block;
+    margin-bottom: 10px;
+}
+
+
+.buttons {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.header {
+    background-image: url(./assets/library.jpg);
+    height: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: relative;
+}
+
+.header > div > div {
+    display: flex;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+}
+
+#library {
+    background-image: url(./assets/wood.jpg);
+    border: solid rgb(123, 89, 60) 5px;
+    padding: 5px;
+    margin-top: 10px;
+    font-size: 60px;
+}
+
+#functionality {
+    display: flex;
+    flex: 1;
+    width: calc(962px * 1.1);
+    justify-content: space-around;
+    align-items: center;
+    font-size: 1.5rem;
+    font-weight: 500;
+    color: black;
+    font-weight: bolder;
+}
+
+#functionality > div {
+    background-image: url(./assets/wood1.jpg);
+    background-size: 150px;
+    padding: 10px;
+    padding-bottom: 5px;
+    border: solid rgb(92, 64, 51) 2px;
+}
+
+
+#functionality:nth-child(2) {
+    margin-left: 25px;
+}
+
+#functionality > div > span{
+    background-image: url(./assets/wood.jpg);
+    background-size: 150px;
+    padding: 10px;
+}
+
+#list {
+    background: url(assets/list.svg);
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(33deg) brightness(110%) contrast(101%);
+    width: 100px;
+    height: 100px;
+    margin-top: 8px;
+    cursor: pointer;
+}
+
+#list:hover {
+    transform: scale(1.05);
+}
+
+#add {
+    background: url(assets/add.svg);
+    filter: invert(100%) sepia(0%) saturate(2%) hue-rotate(33deg) brightness(110%) contrast(101%);
+    width: 100px;
+    height: 100px;
+    cursor: pointer;
+    margin-top: 8px;
+}
+
+#add:hover {
+    transform: scale(1.05);
+}
+
+
+.del {
+    background: url(assets/del.svg) no-repeat;
+    width: 25px;
+    height: 25px;
+    filter: invert(10%) sepia(35%) saturate(7492%) hue-rotate(354deg) brightness(101%) contrast(118%);
+    cursor: pointer;
+}
+
+.del:hover {
+    opacity: 0.8;
+}
+
+#form {
+    height: 100vh;
+    width: 100vw;
+    background-color: rgba(135, 206, 235, 0.7);
+    position: fixed; 
+    z-index: 10;
+    top: 0;
+    left: 0;
+    display: none;
+    align-items: center;
+}
+
+form {
+    width: 450px;
+    margin: 0 auto;
+}
+
+form > div {
+    position: relative;
+    background: white;
+}
+
+form > div > label {
+    opacity: 0.3;
+    position: absolute;
+    top: 22px;
+    left: 20px;
+}
+
+form > div > input[type="text"], form > div > input[type="number"] {
+    width: 380px;
+    border: 0;
+    padding: 20px 20px 20px 50px;
+    background: #eee;
+    font-size: 16px;
+}
+
+input[type="number"] {
+    -moz-appearance: textfield;
+}
+
+
+
+#r {
+    border: 0;
+    padding: 10px 00px 10px 20px;
+    background: #eee;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#r label {
+    display: inline-block;
+	cursor: pointer;
+	padding: 0px 15px;
+	line-height: 34px;
+	border: 1px solid #999;
+	border-radius: 6px;
+	user-select: none;
+}
+
+#r input[type="radio"] {
+    display: none;
+}
+
+#r div {
+    display: inline-block;
+}
+
+#one input[type=radio]:checked + label {
+    background: #bbffbb;
+}
+
+#two input[type=radio]:checked + label {
+    background: #ffc5c5; 
+}
+
+#two {
+    margin-right: 30px;
+}
+
+form > div > input[type="text"]:focus, form > div > input[type="number"]:focus {
+    outline: 0;
+    background: white;
+}
+
+form > div > input[type="text"]:focus + label, form > div > input[type="number"]:focus + label {
+    opacity: 0;
+}
+
+form > div > input[type="text"]:valid, form > div > input[type="number"]:valid {
+    background-size: 20px;
+    background-repeat: no-repeat;
+    background-position: 20px 20px;
+}
+
+form > div > input[type="text"]:valid + label, form > div > input[type="number"]:valid + label {
+    opacity: 0;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown), form > div > input[type="number"]:invalid:not(:focus):not(:placeholder-shown), form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) {
+    background: pink;
+}
+form > div > input[type="text"]:invalid:not(:focus):not(:placeholder-shown) + label, form > div > input[type="number"]:invalid:not(:focus):not(:placeholder-shown) + label, form > div > input[type="password"]:invalid:not(:focus):not(:placeholder-shown) + label {
+    opacity: 0;
+}
+form > div > input[type="text"]:invalid:focus:not(:placeholder-shown) ~ .requirements, form > div > input[type="number"]:invalid:focus:not(:placeholder-shown) ~ .requirements, form > div > input[type="password"]:invalid:focus:not(:placeholder-shown) ~ .requirements {
+    max-height: 200px;
+    padding: 0 30px 20px 50px;
+}
+form > div .requirements {
+    padding: 0 30px 0 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+}
+
+form > div .requirements {
+    padding: 0 30px 0 50px;
+    color: #999;
+    max-height: 0;
+    transition: 0.28s;
+    overflow: hidden;
+    color: red;
+    font-style: italic;
+}
+
+#a {
+    display: inline-block;
+    width: 79%;
+    margin: 20px 0;
+    background: #41D873;
+    color: white;
+    border: 0;
+    padding: 20px;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  #b {
+    display: inline-block;
+    width: 19%;
+    margin: 20px 0;
+    background: #E3242B;
+    color: white;
+    border: 0;
+    font-size: 1.2rem;
+    cursor: pointer;
+  }
+
+  form > span {
+      display: flex;
+      justify-content: space-between;
+  }
+
+#o {
+    display: none;
+}
+
+#table {
+    min-height: 100%;
+    width: 100%;
+    background-color: rgba(135, 206, 235);
+    position: absolute; 
+    z-index: 11;
+    top: 0;
+    left: 0;
+    display: none;
+    justify-content: center;
+}
+
+table {
+    width: calc(962px * 1.1);
+    height: 100px;
+    overflow:visible;
+    margin-top: 50px;
+    margin-bottom: 50px;
+    text-align: center;
+}
+
+tbody {
+    height: 50px;
+}
+tbody:nth-child(even) {
+    background-color: #f2f2f2
+}
+tbody:nth-child(odd) {
+    background-color: white;
+}
+
+th {
+    cursor: pointer;
+}
+
+th:first-of-type {
+    width: 100px;
+}
+
+th:nth-of-type(2) {
+    width: 379px;
+}
+
+th:nth-of-type(3) {
+    width: 379px
+}
+
+th:nth-of-type(4) {
+    width: 100px
+}
+
+#close {
+    background: url(assets/close.svg);
+    border: solid black 2px;
+    cursor: pointer;
+    position: fixed;
+    z-index: 12;
+    right: 5px;
+    top: 5px;
+    height: 100px;
+    width: 100px;
+}
