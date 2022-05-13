@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <script type = "text/javascript" src = "script.js"></script>
+    <script type = "text/javascript" src = "class.js" defer></script>
     <link rel = "stylesheet" href = "./style.css">
     <title>Document</title>
 </head>
@@ -22,22 +22,23 @@
             </div>
         </div>
     </div>
+    <div class = "content" id = "o">
+        <div class = "text">
+            <div class = "info">
+                <span class = "tit"></span>
+                <span class = "author"></span>
+                <span class = "pages"></span>
+            </div>
+            <div class = "buttons">
+                <button class = "del" type = "button"></button>
+                <button class = "read" type = "button">read</button>
+            </div>
+        </div>
+    </div>
     <main>
-        <div class = "shelf" id = "s0">
+        <div class = "shelf">
             <div class = "grid">
-                <div class = "content" id = "o">
-                    <div class = "text">
-                        <div class = "info">
-                            <span class = "tit"></span>
-                            <span class = "author"></span>
-                            <span class = "pages"></span>
-                        </div>
-                        <div class = "buttons">
-                            <button class = "del" type = "button"></button>
-                            <button class = "read" type = "button">read</button>
-                        </div>
-                    </div>
-                </div>
+                
             </div>
         </div> 
     </main>
@@ -81,11 +82,11 @@
         <div id = "close"></div>
         <table id = "bookslist">
             <tr>
-                <th onclick="sortTable(0)">№</th>
-                <th onclick="sortTable(1)">Title</th>
-                <th onclick="sortTable(2)">Author</th>
-                <th onclick="sortTable(3)">Number of pages</th>
-                <th onclick="sortTable(4)">Status</th>
+                <th onclick="sortTable(0, true)">Id</th>
+                <th onclick="sortTable(1, false)">Title</th>
+                <th onclick="sortTable(2, false)">Author</th>
+                <th onclick="sortTable(3, true)">Number of pages</th>
+                <th onclick="sortTable(4, false)">Status</th>
             </tr>
         </table>
     </div>
