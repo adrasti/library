@@ -132,7 +132,6 @@ function sortTable(n, number) {
   let shouldSwitch;
   let switchcount = 0;
   let switching = true;
-
   let dir = "asc"; 
 
   while (switching) {
