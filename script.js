@@ -98,6 +98,7 @@ let Book = class {
         this.del.addEventListener("click", (e) => {  //delete
           adjustShelf(index(e.target.parentElement.parentElement.parentElement.parentElement.parentElement));
           e.target.parentNode.parentNode.parentNode.remove();
+          checkEmptySHelf();
           lib.count = lib.count - 1;
           for(let i = lib.myLibrary.length - 1; i >= 0; i = i - 1) {
             if(lib.myLibrary[i].id > this.id) {
@@ -214,6 +215,9 @@ function adjustShelf(e) {
       }
     }
   }
+}
+
+function checkEmptySHelf() {
   if(document.querySelector('main').lastElementChild.firstElementChild.firstElementChild == null) {    //deletes an empty shelf
     document.querySelector('main').lastElementChild.remove(); 
     lib.scount = lib.scount - 1;
